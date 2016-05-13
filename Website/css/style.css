@@ -41,7 +41,7 @@
 	height: calc(100vh);
 	font-size: 26px;
 	text-align: center;
-	background: #000 url("../img/future-car-01-titled-blue.jpg");
+	background: #000 url("../img/future-car-01-titled.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: fixed;
@@ -81,7 +81,7 @@ body .content {
 	z-index: -1;
 }
 body .color-bg-1 {
-	background: #357ab5 url("../img/denim.png");
+	background: #c41c1c url("../img/denim.png");
 	color: #FAFAFA;
 	text-shadow: 0 -1px #204a6d;
 }
