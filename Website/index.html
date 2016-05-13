@@ -9,202 +9,114 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
-<body data-spy="scroll" data-target=".scroll-spy" data-offset="100">
-
-	<!-- TOP WALLPAPER -->
-	<div class="top-wallpaper">
-		<div class="info">
-			<div class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Informations" data-content="Projet ETIC 2016<br />Telecom ParisTech<br />Encadré par Tommaso BERTOLOTTI">
-				<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-			</div>
-		</div>
-		<div class="info info-offset">
-			<div  class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Etudiants" data-content="Alexandre ZOUAOUI<br />Adrien SEVIN<br />
-			Vincent ROBERT<br />Vincent GAILLARD<br />Khadija EL ATTAR SOFI<br />
-			Sofyan DUBARRY-COUCOU<br />Thomas BESSOU">
-				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-			</div>
-		</div>
-	</div>
-
-	<!-- NAV BAR -->
-	<nav class="navbar navbar-default navbar-inverse" id="nav">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">VOITURES AUTONOMES</a>
-			</div>
-
-			<div class="collapse navbar-collapse" id="navbar">
-				<ul class="nav navbar-nav navbar-right">
-					<li onclick="javascript:$('html, body').animate({scrollTop:0}, 600);location.hash = '';"><a href="#"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true" ></span></a></li>
-					<li><a href="#bottom"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a></li>
-				</ul>
-				<div class="scroll-spy">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#Home" data-toggle="tooltip" data-placement="top" title="Home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
-					<li><a href="#Menu1">Acteurs</a></li>
-					<li><a href="#Menu2">Frise chronologique</a></li>
-					<li><a href="#Menu3">Menu3</a></li>
-					<li><a href="#Menu4">Menu4</a></li>
-					<li class="divider-vertical"></li>
-				</ul>
-				</div>
-			</div>
-		</div>
+<body>
+	<nav>
+		<ul>
+			<li><div class="title"><a href="./">VOITURE AUTONOME</a></div></li><hr>
+			<li class="no-clic"><a onclick="javascript:scroll(0);">Home</a></li>
+			<li class="no-clic"><a onclick="javascript:scroll(1);">Acteurs</a></li>
+			<li class="no-clic"><a onclick="javascript:scroll(2);">Frise chronologique</a></li>
+			<li class="no-clic"><a onclick="javascript:scroll(3);">Part3</a></li>
+			<li class="no-clic"><a onclick="javascript:scroll(4);">Part4</a></li>
+			<li class="no-clic"><a onclick="javascript:scroll(5);">Part5</a></li>
+			<li class="no-clic"><a onclick="javascript:scroll(6);">Part6</a></li>
+		</ul>
 	</nav>
 
-	<!-- CONTENT -->
-	<div class="content" id="content">
+	<div class="home"></div>
+	<div class="info">
+		<div class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Informations" data-content="Projet ETIC 2016<br />Telecom ParisTech<br />Encadré par Tommaso BERTOLOTTI">
+			<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+		</div>
+	</div>
+	<div class="info info-offset">
+		<div  class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Etudiants" data-content="Alexandre ZOUAOUI<br />Adrien SEVIN<br />
+		Vincent ROBERT<br />Vincent GAILLARD<br />Khadija EL ATTAR SOFI<br />
+		Sofyan DUBARRY-COUCOU<br />Thomas BESSOU">
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+		</div>
+	</div>
+	<table id="caneva"><tr><td>
+		<div class="content" id="content1">
+			<h2>Post Title Example One</h2>
+			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
 
-	<!-- Home -->
-	<div id="Home" class="anchor"></div>
-	<div class="color-bg-1 box-content">
-	Hello Word !<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	</div>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+		</div>
+	</td><td>
+		<div class="content" id="content2">
+			<h2>Post Title Example Two</h2>
+			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+		</div>
+	</td><td>
+		<div class="content" id="content3">
+			<h2>Post Title Example Two</h2>
+			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+		</div>
+	</td><td>
+		<div class="content" id="content4">
+			<h2>Post Title Example Two</h2>
+			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+		</div>
+	</td><td>
+		<div class="content" id="content5">
+			<h2>Post Title Example Two</h2>
+			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+		</div>
+	</td><td>
+		<div class="content" id="content6">
+			<h2>Post Title Example Three</h2>
+			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
 
-	<!-- Menu1 -->
-	<div id="Menu1" class="anchor"></div>
-	<div class="color-bg-2 box-content">
-		TITRE<br /><br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-	</div>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
 
-	<!-- Menu2 -->
-	<div id="Menu2" class="anchor"></div>
-	<div class="color-bg-1 box-content">
-		FRISE CHRONOLOGIQUE<br /><br /><br />
-		<iframe id="chronologieContainer" width="100%" height="700" frameborder="0" src="http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=1BzvgVOLkl3dYbpZCv5Jn93GYsKW0benThBgkC1_WYK8&amp;font=Bevan-PotanoSans&amp;maptype=toner&amp;lang=fr&amp;height=700"></iframe>
-		<br /><br />
-	</div>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
 
-	<!-- Menu3 -->
-	<div id="Menu3" class="anchor"></div>
-	<div class="color-bg-2 box-content">
-		TITRE<br /><br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-	</div>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
 
-	<!-- Menu4 -->
-	<div id="Menu4" class="anchor"></div>
-	<div class="color-bg-1 box-content">
-		TITRE<br /><br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br />
-	</div>
-	</div>
-
-	<!-- FOOTER -->
-	<div class="footer" id="footer">
-		<table>
-			<tr>
-				<td style="width:20%;">
-					<center><img class="imgBg" src="img/google-car-01.png" /></center></td>
-				<td class="separator-td"><div class="separator"></div></td>
-				<td style="width:20%;">
-					<div class="box" id="navbar">
-						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> &nbsp;PLAN DU SITE<br /><br />
-						<a href="#Menu1">Acteurs</a><br />
-						<a href="#Menu2">Frise chronologique</a><br />
-						<a href="#Menu3">Menu3</a><br />
-						<a href="#Menu4">Menu4</a><br />
-					</div>
-				</td>
-				<td class="separator-td"><div class="separator"></div></td>
-				<td style="width:20%;">
-					<div class="box">
-						<span class="glyphicon glyphicon-link" aria-hidden="true"></span> &nbsp;LIENS EXTERNES<br /><br />
-						<a href="http://www.telecom-paristech.fr/">Télécom ParisTech</a><br />
-						<a href="http://ethique-tic.fr/">ETIC</a><br />
-						<br /><br />
-					</div>
-				</td>
-				<td class="separator-td"><div class="separator"></div></td>
-				<td style="width:40%;">
-					<div class="box">
-						<span class="glyphicon glyphicon-user" aria-hidden="true"></span> &nbsp;ETUDE DE<br /><br />
-						<table><tr><td>
-						<a data-toggle="tooltip" data-placement="left" title="Encadrant">Tommaso BERTOLOTTI</a>
-						</td><td>
-						<a data-toggle="tooltip" data-placement="left" title="Architecte">Alexandre ZOUAOUI</a>
-						</td></tr><tr><td>
-						<a data-toggle="tooltip" data-placement="left" title="Webographe">Adrien SEVIN</a>
-						</td><td>
-						<a data-toggle="tooltip" data-placement="left" title="Théoricien">Vincent ROBERT</a>
-						</td></tr><tr><td>
-						<a data-toggle="tooltip" data-placement="left" title="Designer">Vincent GAILLARD</a>
-						</td><td>
-						<a data-toggle="tooltip" data-placement="left" title="Juriste">Khadija EL ATTAR SOFI</a>
-						</td></tr><tr><td>
-						<a data-toggle="tooltip" data-placement="left" title="Journaliste">Sofyan DUBARRY-COUCOU</a>
-						</td><td>
-						<a data-toggle="tooltip" data-placement="left" title="Intégrateur Web">Thomas BESSOU</a>
-						</td></tr></table>
-					</div>
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div class="copy" id="bottom">
-		<a href="http://www.telecom-paristech.fr/c-mentions-legales.html">Copyright &copy; 2016 <i>Telecom ParisTech</i> Tous droits réservés</a>.
-	</div>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+		</div>
+	</td></tr></table>
 
 	<!-- JAVASCRIPT -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 	<script>
-	var isMenuTop = false;
 	$(document).ready(function(){
-		// Smooth scrolling
-		$("#navbar a").on('click', function(event) {
-			event.preventDefault();
- 			var hash = this.hash;
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top
-			}, 1000, function(){
-				window.location.hash = hash;
-			});
+		// Remove scrolling when nav clic
+		$("nav .no-clic a").on('click', function(event) {
+			//event.preventDefault();
  		});
- 		// Scroll event
- 		$("#nav").css("marginTop", ($(window).height()-50)+"px");
- 		$(window).scroll(function(){
- 			// Stick menu to top
- 			if(!isMenuTop && $(window).scrollTop() >= $(window).height()-50)
- 				menuTop();
-			else if(isMenuTop && $(window).scrollTop() <= $(window).height()-50)
-				menuBottom()
-		})
+	});
+	// Smooth scrolling
+	function scroll(idx){
+		var hash = this.hash;
+		var scrolling = (idx < 1) ? 0 : $(window).width() - $("nav").width() + $("#content"+idx).outerWidth(true) * (idx-1);
+		$('html, body').animate({
+			scrollLeft: scrolling
+		}, 600, function(){
+			window.location.hash = hash;
+		});
+	}
+	// Horizontal scrolling
+	$(function(){
+		$("body").mousewheel(function(event, delta) {
+			this.scrollLeft -= (delta * 40);
+			event.preventDefault();
+		});
 	});
 	// Tootip and Popover activation
 	$(function () {
 		$('[data-toggle="tooltip"]').tooltip();
 		$('[data-toggle="popover"]').popover();
 	})
-	function menuTop() {
-		$("#nav").css("marginTop", 0);
- 		$("#content").css("marginTop", ($(window).height())+"px");
-		$("#nav").css("position", "fixed");
-		isMenuTop = true;
-	}
-	function menuBottom() {
-		$("#nav").css("marginTop", ($(window).height()-50)+"px");
-		$("#content").css("marginTop", 0);
-		$("#nav").css("position", "relative");
-		isMenuTop = false;
-	}
 	</script>
 </body>
 </html>
