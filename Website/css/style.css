@@ -16,14 +16,20 @@ body {
 }
 body #caneva {
 	margin: 0 0 0 100%;
-	background: #EEE;
+	background: url("../img/landscape01-repeatable.png");
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	z-index: 1;
 }
 body .content { 
-	width: 560px;
+	width: 666px;
 	height: 80%;
 	overflow: auto;
-	margin: 0 50px;
-	padding: 0 10px;
+	margin: 0 40px;
+	padding: 0 20px;
+	color: #111;
+	background: rgba(255, 255, 255, 0.3);
 }
 
 /* NAV */
@@ -76,33 +82,83 @@ nav li a:hover, nav li a:focus {
 .home {
 	width: 100%;
 	height: calc(100vh);
-	background: #EEE url("../img/future-car-01-titled.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: -2;
+	z-index: 0;
+	text-align: center;
+	font-size: 42px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow:	1px 1px 0 #AAA,
+					2px 2px 0 #BBB,
+					3px 3px 0 #CCC,
+					4px 4px 0 #DDD,
+
+					2px 1px 0 #BBB,
+					4px 2px 0 #DDD;
 }
-.info {
+.home table {
+	width: 100%;
+}
+.home tr, td {
+	width: 100%;
+}
+.home .svg {
+	width: 100%;
+	height: 100%;
+	background: url("../img/ggcar-btn.png") no-repeat;
+	background-size: auto 100%;
+	background-position: center;
+}
+.home #svg-ggcar-door {
+	cursor: pointer;
+}
+.cst-icons {
 	position: fixed;
 	right: 24px;
 	top: 20px;
 	font-size: 24px;
 	color: #222;
 	text-shadow: 0 0 1px #222;
-	cursor: pointer;
-	z-index: 2;
+	z-index: 4;
+	letter-spacing: 4px;
 }
-.info-offset{
-	right: 64px;
+.cst-icons .info {
+	display: inline-block;
+	cursor: pointer;
+}
+.cst-icons a {
+	color: #222;
 }
 .popover {
 	width: 220px;
 	position: fixed;
-	z-index: 2;
+	z-index: 4;
 	font-size: 12px;
 }
 .pop {
 	outline: none;
+}
+
+/* WINDOW */
+.window {
+	width: 100%;
+	height: calc(100vh);
+	background: url("../img/window.svg");
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 0;
+	z-index: 2;
+	pointer-events: none
+}
+.window-absolute {
+	position: absolute;
+	left: calc(100vw);
+}
+.window-fixed {
+	position: fixed;
+	left: 0;
 }

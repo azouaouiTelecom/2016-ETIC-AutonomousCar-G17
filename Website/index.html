@@ -10,7 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<nav>
+	<!--<nav>
 		<ul>
 			<li><div class="title"><a href="./">VOITURE AUTONOME</a></div></li><hr>
 			<li class="no-clic"><a onclick="javascript:scroll(0);">Home</a></li>
@@ -21,22 +21,39 @@
 			<li class="no-clic"><a onclick="javascript:scroll(5);">Part5</a></li>
 			<li class="no-clic"><a onclick="javascript:scroll(6);">Part6</a></li>
 		</ul>
-	</nav>
+	</nav>-->
 
-	<div class="home"></div>
-	<div class="info">
-		<div class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Informations" data-content="Projet ETIC 2016<br />Telecom ParisTech<br />Encadré par Tommaso BERTOLOTTI">
-			<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+	<div class="home" id="home">
+		<table><tr><td style="height: calc(100vh*0.3);" id="test">Voitures &nbsp; Autonomes<br /></td></tr>
+		<tr><td style="height: calc(100vh*0.7)">
+			<div class="svg">
+				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1052.3622 744.09448" version="1.1">
+					<g id="svg-ggcar-door">
+						<path d="m 323.76012,618.90044 c -8.44046,-88.1535 8.83336,-140.20615 150,-140 129.07672,1.30526 169.8216,24.14054 200,143.57142 6.87469,45.25377 5.36008,90.66422 2.60196,144.97763 -3.03963,59.85705 -32.96251,66.5665 -136.88768,65.73666 -103.60608,3.13542 -170.48339,4.76111 -215.71428,-214.28571 z" id="svg-ggcar-door-d" transform="translate(0,-308.26772)" fill="rgba(255,255,255,0)"></path>
+					</g>
+				</svg>
+			</div>
+		</td></tr></table>
+	</div>
+	<div class="cst-icons">
+		<div class="info">
+			<div class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Informations" data-content="Projet ETIC 2016<br />Telecom ParisTech<br />Encadré par Tommaso BERTOLOTTI">
+				<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+			</div>
+		</div>
+		<div class="info">
+			<div class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Etudiants" data-content="Alexandre ZOUAOUI<br />Adrien SEVIN<br />
+			Vincent ROBERT<br />Vincent GAILLARD<br />Khadija EL ATTAR SOFI<br />
+			Sofyan DUBARRY-COUCOU<br />Thomas BESSOU">
+				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+			</div>
+		</div>
+		<div class="info" title="Home">
+			<a onclick="javascript:scroll(0);"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
 		</div>
 	</div>
-	<div class="info info-offset">
-		<div  class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Etudiants" data-content="Alexandre ZOUAOUI<br />Adrien SEVIN<br />
-		Vincent ROBERT<br />Vincent GAILLARD<br />Khadija EL ATTAR SOFI<br />
-		Sofyan DUBARRY-COUCOU<br />Thomas BESSOU">
-			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-		</div>
-	</div>
-	<table id="caneva"><tr><td>
+	<table id="caneva"><tr><td style="padding-left: 200px">
+		<div class="window window-absolute" id="window"></div>
 		<div class="content" id="content1">
 			<h2>Post Title Example One</h2>
 			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
@@ -68,7 +85,7 @@
 			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
 		</div>
-	</td><td>
+	</td><td style="padding-right: calc(100vw/2)">
 		<div class="content" id="content6">
 			<h2>Post Title Example Three</h2>
 			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
@@ -88,35 +105,6 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-	<script>
-	$(document).ready(function(){
-		// Remove scrolling when nav clic
-		$("nav .no-clic a").on('click', function(event) {
-			//event.preventDefault();
- 		});
-	});
-	// Smooth scrolling
-	function scroll(idx){
-		var hash = this.hash;
-		var scrolling = (idx < 1) ? 0 : $(window).width() - $("nav").width() + $("#content"+idx).outerWidth(true) * (idx-1);
-		$('html, body').animate({
-			scrollLeft: scrolling
-		}, 600, function(){
-			window.location.hash = hash;
-		});
-	}
-	// Horizontal scrolling
-	$(function(){
-		$("body").mousewheel(function(event, delta) {
-			this.scrollLeft -= (delta * 40);
-			event.preventDefault();
-		});
-	});
-	// Tootip and Popover activation
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip();
-		$('[data-toggle="popover"]').popover();
-	})
-	</script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
