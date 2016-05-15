@@ -46,6 +46,6 @@ $(function () {
 })
 // Menu event
 function onMenu() {
-	$("nav").toggle("slide", "left", difplay=500);
+	$("nav").toggle("slide", "left", difplay=300);
 	menu = !menu;
 }
