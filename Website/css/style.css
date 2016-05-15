@@ -20,29 +20,40 @@ body #caneva {
 	background-position: 0 0;
 	background-repeat: repeat-x;
 	background-size: auto 100%;
-	z-index: 1;
+	box-shadow: 0 0 10px #000;
+	z-index: 0;
 }
 body .content { 
-	width: 666px;
-	height: 80%;
+	width: calc(100vw * 0.5);
+	height: 88%;
 	overflow: auto;
-	margin: 0 40px;
-	padding: 0 20px;
+	margin: 8% 40px 4% 40px;
+	padding: 6px 24px 12% 24px;
+	text-align: justify;
 	color: #111;
-	background: rgba(255, 255, 255, 0.3);
+	background: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* NAV */
 
 nav {
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
 	min-width: 180px;
 	width: 15%;
-	height: 100%;
+	max-height: calc(100% - 60px);
 	color: #EEE;
 	background: #222;
+	box-shadow: 0 0 16px #0A0A0A;
+	z-index: 3;
+	border-right: 1px solid #0F0F0F;
+	overflow: auto;
+}
+nav ul {
+	margin-bottom: 0;
 }
 nav .title {
 	padding: 14px 8px;
@@ -54,10 +65,11 @@ nav .title a {
 }
 nav .title a:hover, nav .title a:focus {
 	text-decoration: none;
-	background: #222;
+	box-shadow: none;
 }
 nav hr {
-	border-top: 1px solid #1A1A1A;
+	border-bottom: 1px solid #0F0F0F;
+	border-top: 1px solid #3D3D3D;
 	margin: 0;
 }
 nav li {
@@ -73,7 +85,7 @@ nav li a {
 nav li a:hover, nav li a:focus {
 	color: #EEE;
 	text-decoration: none;
-	background: #1A1A1A;
+	box-shadow: inset 0 0 16px #0A0A0A;
 	cursor: pointer;
 }
 
@@ -91,13 +103,7 @@ nav li a:hover, nav li a:focus {
 	letter-spacing: 3px;
 	text-transform: uppercase;
 	font-weight: bold;
-	text-shadow:	1px 1px 0 #AAA,
-					2px 2px 0 #BBB,
-					3px 3px 0 #CCC,
-					4px 4px 0 #DDD,
-
-					2px 1px 0 #BBB,
-					4px 2px 0 #DDD;
+	text-shadow: 1px 1px 0 #AAA, 2px 2px 0 #BBB, 3px 3px 0 #CCC, 4px 4px 0 #DDD, 2px 1px 0 #BBB, 4px 2px 0 #DDD;
 }
 .home table {
 	width: 100%;
@@ -115,6 +121,9 @@ nav li a:hover, nav li a:focus {
 .home #svg-ggcar-door {
 	cursor: pointer;
 }
+
+/* ICONS */
+
 .cst-icons {
 	position: fixed;
 	right: 24px;
@@ -122,20 +131,29 @@ nav li a:hover, nav li a:focus {
 	font-size: 24px;
 	color: #222;
 	text-shadow: 0 0 1px #222;
-	z-index: 4;
-	letter-spacing: 4px;
+	letter-spacing: 6px;
 }
-.cst-icons .info {
+.cst-icons-content {
+	position: absolute;
+	font-size: 24px;
+	bottom: 14px;
+	left: 18px;
+	color: #EEE;
+	text-shadow: 0 0 8px #000;
+	letter-spacing: 10px;
+	pointer-events: auto;
+}
+.cst-icons .info, .cst-icons-content .info {
 	display: inline-block;
 	cursor: pointer;
 }
-.cst-icons a {
-	color: #222;
+.cst-icons-content a {
+	color: #EEE;
+	cursor: pointer;
 }
 .popover {
 	width: 220px;
 	position: fixed;
-	z-index: 4;
 	font-size: 12px;
 }
 .pop {
@@ -143,13 +161,14 @@ nav li a:hover, nav li a:focus {
 }
 
 /* WINDOW */
+
 .window {
 	width: 100%;
 	height: calc(100vh);
-	background: url("../img/window.svg");
-	background-size: auto 100%;
-	background-repeat: no-repeat;
-	background-position: center;
+	background: url("../img/window.svg"), url("../img/landscape01-front.png");
+	background-size: auto 100%, auto 100%;
+	background-repeat: no-repeat, repeat;
+	background-position: center, 0 0;
 	top: 0;
 	z-index: 2;
 	pointer-events: none
