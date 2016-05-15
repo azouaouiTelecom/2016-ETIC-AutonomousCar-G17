@@ -46,6 +46,10 @@ $(function () {
 })
 // Menu event
 function onMenu() {
-	$("nav").toggle("slide", "left", difplay=300);
+	//$("nav").toggle("slide", "left", difplay=300);
+	if(menu)
+		$("nav").slideUp(300);
+	else
+		$("nav").slideDown(300);
 	menu = !menu;
 }
