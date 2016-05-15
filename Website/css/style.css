@@ -20,14 +20,14 @@ body #caneva {
 	background-position: 0 0;
 	background-repeat: repeat-x;
 	background-size: auto 100%;
-	z-index: 1;
+	z-index: 0;
 }
 body .content { 
 	width: 666px;
 	height: 80%;
 	overflow: auto;
 	margin: 0 40px;
-	padding: 0 20px;
+	padding: 0 20px 80px 20px;
 	color: #111;
 	background: rgba(255, 255, 255, 0.3);
 }
@@ -35,14 +35,16 @@ body .content {
 /* NAV */
 
 nav {
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
 	min-width: 180px;
 	width: 15%;
-	height: 100%;
+	height: calc(100% - 60px);
 	color: #EEE;
 	background: #222;
+	z-index: 3;
 }
 nav .title {
 	padding: 14px 8px;
@@ -115,6 +117,9 @@ nav li a:hover, nav li a:focus {
 .home #svg-ggcar-door {
 	cursor: pointer;
 }
+
+/* ICONS */
+
 .cst-icons {
 	position: fixed;
 	right: 24px;
@@ -122,20 +127,29 @@ nav li a:hover, nav li a:focus {
 	font-size: 24px;
 	color: #222;
 	text-shadow: 0 0 1px #222;
-	z-index: 4;
-	letter-spacing: 4px;
+	letter-spacing: 6px;
 }
-.cst-icons .info {
+.cst-icons-content {
+	position: absolute;
+	font-size: 24px;
+	bottom: 14px;
+	left: 18px;
+	color: #EEE;
+	text-shadow: 0 0 1px #222;
+	letter-spacing: 10px;
+	pointer-events: auto;
+}
+.cst-icons .info, .cst-icons-content .info {
 	display: inline-block;
 	cursor: pointer;
 }
-.cst-icons a {
-	color: #222;
+.cst-icons-content a {
+	color: #EEE;
+	cursor: pointer;
 }
 .popover {
 	width: 220px;
 	position: fixed;
-	z-index: 4;
 	font-size: 12px;
 }
 .pop {
@@ -143,13 +157,14 @@ nav li a:hover, nav li a:focus {
 }
 
 /* WINDOW */
+
 .window {
 	width: 100%;
 	height: calc(100vh);
-	background: url("../img/window.svg");
-	background-size: auto 100%;
-	background-repeat: no-repeat;
-	background-position: center;
+	background: url("../img/window.svg"), url("../img/landscape01-front.png");
+	background-size: auto 100%, auto 100%;
+	background-repeat: no-repeat, repeat;
+	background-position: center, 0 0;
 	top: 0;
 	z-index: 2;
 	pointer-events: none

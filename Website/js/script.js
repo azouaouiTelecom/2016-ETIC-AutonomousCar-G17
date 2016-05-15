@@ -1,9 +1,10 @@
+var menu = false;
 $(document).ready(function(){
 	// Remove scrolling when nav clic
 	$("nav .no-clic a").on('click', function(event) {
 		event.preventDefault();
  	});
- 	// google car door click handler
+ 	// Google car door click handler
  	$("#svg-ggcar-door").on('click', function() {
  		$("#home").css("zIndex", "-1");
  		scroll(1);
@@ -18,12 +19,10 @@ $(document).ready(function(){
 // Smooth scrolling
 function scroll(idx){
 	var hash = this.hash;
-	var scrolling = (idx < 1) ? 0 : $(window).width() - $("nav").width() + $("#content"+idx).outerWidth(true) * (idx-1);
+	var scrolling = (idx < 1) ? 0 : $(window).width() + $("#content"+idx).outerWidth(true) * (idx-1);
 	$('html, body').animate({
 		scrollLeft: scrolling
-	}, 600, function(){
-		window.location.hash = hash;
-	});
+	}, 600);
 }
 // Horizontal scrolling
 $(function(){
@@ -34,11 +33,19 @@ $(function(){
 });
 // Scrolling event
 $(window).scroll(function(){
- 	$("#home").css("zIndex", ($(window).scrollLeft() < $(window).width()*0.2) ? "0" : "-1");
+ 	$("#home").css("zIndex", ($(window).scrollLeft() <= 0) ? "0" : "-1");
 	$("#window").attr("class", ($(window).scrollLeft() < $(window).width()) ? "window window-absolute" : "window window-fixed");
+	$("#window").css("backgroundPosition", "center, -"+($(window).scrollLeft()*2)+"px 0");
+	if(menu && $(window).scrollLeft() < $(window).width())
+		onMenu();
 })
 // Tootip and Popover activation
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip();
 	$('[data-toggle="popover"]').popover();
 })
+// Menu event
+function onMenu() {
+	$("nav").toggle("slide", "left", difplay=500);
+	menu = !menu;
+}

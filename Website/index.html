@@ -10,7 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<!--<nav>
+	<nav>
 		<ul>
 			<li><div class="title"><a href="./">VOITURE AUTONOME</a></div></li><hr>
 			<li class="no-clic"><a onclick="javascript:scroll(0);">Home</a></li>
@@ -21,10 +21,24 @@
 			<li class="no-clic"><a onclick="javascript:scroll(5);">Part5</a></li>
 			<li class="no-clic"><a onclick="javascript:scroll(6);">Part6</a></li>
 		</ul>
-	</nav>-->
+	</nav>
 
 	<div class="home" id="home">
-		<table><tr><td style="height: calc(100vh*0.3);" id="test">Voitures &nbsp; Autonomes<br /></td></tr>
+		<div class="cst-icons">
+			<div class="info">
+				<div class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Informations" data-content="Projet ETIC 2016<br />Telecom ParisTech<br />Encadré par Tommaso BERTOLOTTI">
+					<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+				</div>
+			</div>
+			<div class="info">
+				<div class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Etudiants" data-content="Alexandre ZOUAOUI<br />Adrien SEVIN<br />
+				Vincent ROBERT<br />Vincent GAILLARD<br />Khadija EL ATTAR SOFI<br />
+				Sofyan DUBARRY-COUCOU<br />Thomas BESSOU">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+				</div>
+			</div>
+		</div>
+		<table><tr><td style="height: calc(100vh*0.3);">Voitures &nbsp; Autonomes<br /></td></tr>
 		<tr><td style="height: calc(100vh*0.7)">
 			<div class="svg">
 				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1052.3622 744.09448" version="1.1">
@@ -35,25 +49,18 @@
 			</div>
 		</td></tr></table>
 	</div>
-	<div class="cst-icons">
-		<div class="info">
-			<div class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Informations" data-content="Projet ETIC 2016<br />Telecom ParisTech<br />Encadré par Tommaso BERTOLOTTI">
-				<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-			</div>
-		</div>
-		<div class="info">
-			<div class="pop" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" title="Etudiants" data-content="Alexandre ZOUAOUI<br />Adrien SEVIN<br />
-			Vincent ROBERT<br />Vincent GAILLARD<br />Khadija EL ATTAR SOFI<br />
-			Sofyan DUBARRY-COUCOU<br />Thomas BESSOU">
-				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-			</div>
-		</div>
-		<div class="info" title="Home">
-			<a onclick="javascript:scroll(0);"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
-		</div>
-	</div>
+
 	<table id="caneva"><tr><td style="padding-left: 200px">
-		<div class="window window-absolute" id="window"></div>
+		<div class="window window-absolute" id="window">
+			<div class="cst-icons-content">
+				<div class="info" title="Menu">
+					<a onclick="javascript:onMenu(0);"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+				</div>
+				<div class="info" title="Home">
+					<a onclick="javascript:scroll(0);"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+				</div>
+			</div>
+		</div>
 		<div class="content" id="content1">
 			<h2>Post Title Example One</h2>
 			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
@@ -103,6 +110,7 @@
 
 	<!-- JAVASCRIPT -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
