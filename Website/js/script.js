@@ -18,19 +18,11 @@ $(document).ready(function(){
 });
 // Smooth scrolling
 function scroll(idx){
-	var hash = this.hash;
 	var scrolling = (idx < 1) ? 0 : $(window).width() + $("#content"+idx).outerWidth(true) * (idx-1);
 	$('html, body').animate({
 		scrollLeft: scrolling
 	}, 600);
 }
-// Horizontal scrolling
-$(function(){
-	$("body").mousewheel(function(event, delta) {
-		this.scrollLeft -= (delta * 40);
-		event.preventDefault();
-	});
-});
 // Scrolling event
 $(window).scroll(function(){
  	$("#home").css("zIndex", ($(window).scrollLeft() <= 0) ? "0" : "-1");
