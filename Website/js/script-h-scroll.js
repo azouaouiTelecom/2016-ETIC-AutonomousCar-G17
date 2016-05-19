@@ -1,7 +1,7 @@
 // Horizontal scrolling
 $(function(){
 	$("body").mousewheel(function(event, delta) {
-		this.scrollLeft -= (delta * 40);
+		this.scrollLeft -= (delta * 20);
 		event.preventDefault();
 	});
 });

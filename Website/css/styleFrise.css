@@ -13,7 +13,7 @@ html, body {
 	height: 100%;
 }
 table {
-	height: calc(100vh - 70px);
+	height: calc(100vh - 60px);
 }
 body {
 	font-family: Lato;
@@ -23,11 +23,15 @@ body {
 	background-position: 0 0;
 	background-repeat: repeat-x;
 	background-size: auto 100%;
+	overflow: hidden;
 }
 body .title {
 	font-size: 20px;
 	text-shadow: 0 0 4px #111;
 	padding: 0;
+}
+body .title .icon {
+	font-size: 26px;
 }
 table .bg {
 	background: url("../img/round-shadow.png");
@@ -36,13 +40,12 @@ table .bg {
 	background-position: center;
 }
 table .first {
-	background: #414141;
-	box-shadow: inset 0 0 10px #111;
+
 }
 tr {
 	height: 33%;
 }
-#technology, #law, #divers .first {
+#technology, #law {
 	border-bottom: 1px solid #EEE;
 }
 .block { 
@@ -68,14 +71,21 @@ tr {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: calc(70px - 12px);
-	background: #222;
+	height: 60px;
+	background: #333 url("../img/timeline.png");
+	background-repeat: repeat;
+	background-position: 0 0;
+	background-size: 5% 1px;
 	border-top: 1px solid #EEE;
 }
 .menu-content {
+	background: url("../img/timeline-cur.png");
+	background-position: 0 0;
+	background-repeat: repeat-y;
+	background-size: 2px 1px;
 	font-size: 26px;
 	letter-spacing: 8px;
-	padding: 10px;
+	padding: 12px;
 	text-shadow: 0 0 6px #000;
 }
 .menu-content a {

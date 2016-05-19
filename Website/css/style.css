@@ -40,7 +40,7 @@ body .content {
 nav {
 	display: none;
 	position: fixed;
-	top: 0;
+	bottom: 60px;
 	left: 0;
 	min-width: 180px;
 	width: 15%;
