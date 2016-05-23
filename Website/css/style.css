@@ -108,7 +108,7 @@ nav li a:hover, nav li a:focus {
 .home table {
 	width: 100%;
 }
-.home tr, .home td {
+.home tr, td {
 	width: 100%;
 	height: 100%;
 }
