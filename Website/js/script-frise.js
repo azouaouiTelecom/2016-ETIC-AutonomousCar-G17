@@ -54,6 +54,8 @@ $(window).scroll(function(){
 				show(idx - iMin, j, timeSH);
 		}
 	}
+	if($(document).width() > $(window).width())
+		$("#menu-content").css("backgroundPosition", (100*$(window).scrollLeft()/($(document).width()-$(window).width()))+"% 0");
 })
 
 function onLeft(idx){
