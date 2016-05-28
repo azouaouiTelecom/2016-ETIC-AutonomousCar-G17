@@ -6,40 +6,42 @@ var minTime = 1; // distance minimum entre deux dates (évite le chevauchement)
 var lastScrollLeft = 0; // used to determine scroll direction
 var blockShow = [[0, 0], [0, 0], [0, 0]]; // first idx show / last idx show for each line
 
-var Event = function(date, datePlus, title, logo, size, desc) {
+var Event = function(date, datePlus, title, logo, size, desc, link) {
    this.date = date;
    this.datePlus = datePlus;
    this.title = title;
    this.logo = logo;
    this.size = size; // 1 tiny, 2 small, 3 normal, 4 large
    this.desc = desc;
+   this.link = link;
 };
 
-var eventsTech = [	new Event(1945, "", "Invention du régulateur de vitesse", null, 3, ""),
-					new Event(1950, "Années", "Invention de la direction assistée", null, 3, ""),
-					new Event(1980, "Années", "Premiers essais de véhicules autonomes", null, 3, ""),
-					new Event(1985, "Juillet", "Loi Badinter", "list-alt", 3, "La Loi Badinter stipule que les dommages causés par un véhicule sont quasiment toujours imputables au conducteur de l’engin, sauf si la victime a commis une faute inexcusable qui a exclusivement causé l’accident."),
-					new Event(2005, "2004 et", "DARPA Grand Challenge.", null, 3, "DARPA Grand Challenge : course de véhicules autonomes."),
-					new Event(2009, "", "Projet de la Google Car", null, 2, "Lancement du projet de la Google Car"),
-					new Event(2010, "Années", "Projet de développement de voitures autonomes", null, 2, "Lancement de projet de développement de voitures autonomes"),
-					new Event(2012, "Août", "300 000 miles dépassée par les Google Car", "road", 3, "Barre des 300 000 miles dépassée par la flotte de Google Car"),
-					new Event(2015, "", "Software Autopilot - Tesla", null, 3, "Mise en place du Software Autopilot de Tesla")];
+var eventsTech = [	new Event(1945, "", "Invention du régulateur de vitesse", null, 3, "", null),
+					new Event(1950, "Années", "Invention de la direction assistée", null, 3, "", null),
+					new Event(1980, "Années", "Premiers essais de véhicules autonomes", null, 3, "", null),
+					new Event(1985, "Juillet", "Loi Badinter", "list-alt", 3, "La Loi Badinter stipule que les dommages causés par un véhicule sont quasiment toujours imputables au conducteur de l’engin, sauf si la victime a commis une faute inexcusable qui a exclusivement causé l’accident.", null),
+					new Event(2005, "2004 et", "DARPA Grand Challenge.", null, 3, "DARPA Grand Challenge : course de véhicules autonomes.", null),
+					new Event(2009, "", "Projet de la Google Car", null, 2, "Lancement du projet de la Google Car", null),
+					new Event(2010, "Années", "Projet de développement de voitures autonomes", null, 2, "Lancement de projet de développement de voitures autonomes", null),
+					new Event(2012, "Août", "300 000 miles dépassée par les Google Car", "road", 3, "Barre des 300 000 miles dépassée par la flotte de Google Car", null),
+					new Event(2015, "", "Software Autopilot - Tesla", null, 3, "Mise en place du Software Autopilot de Tesla", "https://en.wikipedia.org/wiki/Tesla_Motors")];
 
-var eventsLaw = [	new Event(1968, "", "Convention de Vienne", "list-alt", 3, "Convention de Vienne : circulation routière"),
-					new Event(1990, "Années", "Démocratisation de la direction assistée", null, 3, ""),
-					new Event(2004, "", "Limiteur de vitesse obligatoire", null, 3, "Les nouveaux véhicules sont obligatoirement équipés d'un limiteur de vitesse"),
-					new Event(2011, "", "Premier état autorisant les voitures autonomes", null, 3, "Premier état américain à autoriser la circulation des voitures autonomes"),
-					//new Event(2015, "", "Les véhicules autonomes en France", null, 2, "La loi de la transition énergétique portée par Ségolène Royal confère au gouvernement français le recours aux ordonnances pour permettrent la circulation des véhicules autonomes"),
-					new Event(2015, "Juin", "McKinsey redéfinit le monde automobile", "list-alt", 2, "Publication par McKinsey d'un rapport sur l'éventuelle redéfinition du monde de l'automobile par les véhicules autonomes"),
-					new Event(2015, "Octobre", "Porsche revendique le plaisir de conduire", null, 2, "Oliver Blume, PDG de Porsche, revendique le plaisir de conduire face à l'essor du développement des voitures autonomes et annonce que Porsche ne se lancera pas dans la course à la voiture autonome."),
-					new Event(2016, "Février", "L'intelligence artificielle devient responsable", null, 2, "La NHTSA accepte de considérer l'intelligence artificielle de la Google Car comme le conducteur responsable du véhicule"),
-					new Event(2016, "Mars", "Révision de la Convention de Vienne", "list-alt", 2, "Annonce de la révision de la Convention de Vienne pour l'autorisation des véhicules autonomes conformes aux réglementations des Nations Unies")];
+var eventsLaw = [	new Event(1968, "", "Convention de Vienne", "list-alt", 3, "Convention de Vienne : circulation routière", null),
+					new Event(1990, "Années", "Démocratisation de la direction assistée", null, 3, "", "http://www.larousse.fr/archives/journaux_annee/1995/177/automobile_questions_sur_le_futur"),
+					new Event(2004, "", "Limiteur de vitesse obligatoire", null, 3, "Les nouveaux véhicules sont obligatoirement équipés d'un limiteur de vitesse", "http://www.securite-routiere.gouv.fr/medias/espace-presse/publications-presse/limiteur-et-regulateur-de-vitesse-quelques-definitions-apportees-par-la-securite-routiere"),
+					new Event(2011, "", "Premier état autorisant les voitures autonomes", null, 3, "Premier état américain à autoriser la circulation des voitures autonomes", null),
+					//new Event(2015, "", "Les véhicules autonomes en France", null, 2, "La loi de la transition énergétique portée par Ségolène Royal confère au gouvernement français le recours aux ordonnances pour permettrent la circulation des véhicules autonomes", null),
+					new Event(2015, "Juin", "McKinsey redéfinit le monde automobile", "list-alt", 2, "Publication par McKinsey d'un rapport sur l'éventuelle redéfinition du monde de l'automobile par les véhicules autonomes", "http://www.mckinsey.com/industries/automotive-and-assembly/our-insights/ten-ways-autonomous-driving-could-redefine-the-automotive-world"),
+					new Event(2015, "Octobre", "Porsche revendique le plaisir de conduire", null, 2, "Oliver Blume, PDG de Porsche, revendique le plaisir de conduire face à l'essor du développement des voitures autonomes et annonce que Porsche ne se lancera pas dans la course à la voiture autonome.", "http://www.frandroid.com/produits-android/automobile/339524_porsche-et-lamborghini-ne-veulent-pas-de-voitures-autonomes"),
+					new Event(2016, "Février", "L'intelligence artificielle devient responsable", null, 2, "La NHTSA accepte de considérer l'intelligence artificielle de la Google Car comme le conducteur responsable du véhicule", "http://droitdu.net/2016/03/vers-un-encadrement-juridique-de-la-voiture-autonome/"),
+					new Event(2016, "Mars", "Révision de la Convention de Vienne", "list-alt", 2, "Annonce de la révision de la Convention de Vienne pour l'autorisation des véhicules autonomes conformes aux réglementations des Nations Unies", null)];
 
-var eventsDiv = [	new Event(1957, "", "Les véhicules autonomes dans la littérature", "book", 3, "Premières apparitions de véhicules autonomes dans la littérature"),
-					new Event(2015, "Décembre", "Stephen Boulder prévient du danger de la conduite assistée", null, 2, "Stephen Boulder, ingénieur chez Jaguar, estime que la conduite semi-automatique est dangereuse et crée un fausse impression de sécurité"),
-					new Event(2016, "Février", "Accrochage d'une Google Car", "fire", 2, "Accrochage mineure d'une Google Car Lexus avec un bus sur une route Californienne"),
-					new Event(2016, "Avril", "Les 10 questions de Consumer Watchdog à Google", null, 2, "Les 10 questions de Consumer Watchdog adressées à Google au sujet de la sécurité en marge du NHTSA"),
-					new Event(2020, "", "Objectif zéro mort ou blessé grave", null, 3, "Objectif zéro mort ou blessé grave dans un accident impliquant un véhicule récent de la marque Volvo")];
+var eventsDiv = [	new Event(1957, "", "Les véhicules autonomes dans la littérature", "book", 3, "Premières apparitions de véhicules autonomes dans la littérature", null),
+					new Event(2015, "Décembre", "Stephen Boulder prévient du danger de la conduite assistée", null, 2, "Stephen Boulder, ingénieur chez Jaguar, estime que la conduite semi-automatique est dangereuse et crée un fausse impression de sécurité", null),
+					new Event(2015, "Octobre", "Volvo prend la responsabilité de ses véhicules autonomes", null, 3, "Annonce de l'entière responsabilité de ses véhicules autonomes assumée par Håkan Samuelsson (PDG Volvo)", "http://fortune.com/2015/10/07/volvo-liability-self-driving-cars/"),
+					new Event(2016, "Février", "Accrochage d'une Google Car", "fire", 2, "Accrochage mineure d'une Google Car Lexus avec un bus sur une route Californienne", "https://www.wired.com/2016/02/googles-self-driving-car-may-caused-first-crash/"),
+					new Event(2016, "Avril", "Les 10 questions de Consumer Watchdog à Google", null, 2, "Les 10 questions de Consumer Watchdog adressées à Google au sujet de la sécurité en marge du NHTSA", "http://www.consumerwatchdog.org/newsrelease/google%E2%80%99s-proposal-%E2%80%9Cfast-track%E2%80%9D-approval-driverless-cars-threat-public-safety-consumer-wa"),
+					new Event(2020, "", "Objectif zéro mort ou blessé grave", null, 3, "Objectif zéro mort ou blessé grave dans un accident impliquant un véhicule récent de la marque Volvo", null)];
 
 // Horizontal scrolling
 $(function(){
@@ -155,6 +157,10 @@ function onBlock(id) {
 	$("#content").children(".date").text(e.datePlus + " " + e.date);
 	$("#content").children(".desc").text(e.desc);
 	$("#content").children(".infos").text("Catégorie : " + i2str(id.substr(5, 1)));
+	if(e.link != null)
+		$("#content").children(".link").html("<a href=\"" + e.link + "\"><span class=\"glyphicon glyphicon-link\" aria-hidden=\"true\"></span> source</a>");
+	else
+		$("#content").children(".link").html("");
 
 	if($("#content").css("display").localeCompare("none") == 0)
 		$("#content").animate({width:'toggle'},350);
