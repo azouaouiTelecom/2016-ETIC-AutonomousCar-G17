@@ -88,6 +88,25 @@ tr {
 	padding: 12px;
 	text-shadow: 0 0 6px #000;
 }
+.menu-content #date-menu {
+	position: absolute;
+	font-size: 16px;
+	top: calc(60px/2 - 16px/2);
+	left: 6px;
+	letter-spacing: 1px;
+	color: #3492db;
+}
+.menu-content #pointer-menu {
+	position: absolute;
+	width: 22px;
+	height: 14px;
+	background: url("../img/pointer.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: calc(-15px);
+	left: calc(100vh * 0.33 - 11px);
+}
 .menu-content a {
 	color: #EEE;
 	cursor: pointer;

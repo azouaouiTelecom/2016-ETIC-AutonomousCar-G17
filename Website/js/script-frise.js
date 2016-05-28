@@ -4,6 +4,7 @@ var timeSH = 400;
 var iMin = 1;
 var idx = 1;
 var blockW = $(window).height() * 0.33;
+var contentVisible = false;
 
 $(document).ready(function(){
 	idx = Math.floor($(window).width() / blockW) - 1;
@@ -15,10 +16,16 @@ $(document).ready(function(){
 					show(i, j, 0);
 				else
 					hide(i, j, 0);
+				$("#block" + i + j).click(function() {
+					onBlock(i, j);
+				});
 			}
 		}
 	}
 	$('.block').each(function() {$( this ).css('visibility', 'visible');});
+	$(".blockNull").click(function() {
+		onNull();
+	});
 });
 
 function hide(i, j, time) {
@@ -55,7 +62,16 @@ $(window).scroll(function(){
 		}
 	}
 	if($(document).width() > $(window).width())
-		$("#menu-content").css("backgroundPosition", (100*$(window).scrollLeft()/($(document).width()-$(window).width()))+"% 0");
+	{
+		var cursorPos = 100*$(window).scrollLeft()/($(document).width()-$(window).width()); // %
+		$("#menu-content").css("backgroundPosition", cursorPos+"% 0");
+		$("#date-menu").text(Math.floor(cursorPos*100/100+1920));
+		if($(window).scrollLeft() > 46)
+			$("#date-menu").css("left", "calc(" + cursorPos + "% - 46px)");
+		else
+			$("#date-menu").css("left", "6px");
+		$("#pointer-menu").css("left", "calc(" + (cursorPos*(1-$(".first").width()/$(window).width())) + "% + " + ($(".first").width()-11) + "px)");
+	}
 })
 
 function onLeft(idx){
@@ -68,4 +84,12 @@ function scroll(scroll){
 	$('html, body').animate({
 		scrollLeft: scroll
 	}, 800);
+}
+function onBlock(i, j) {
+	// set content
+	//if(!contentVisible)
+		// content must be set to visible
+}
+function onNull() {
+	//content must be hidded
 }
