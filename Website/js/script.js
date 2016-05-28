@@ -1,5 +1,14 @@
 var menu = false;
 var state = 0; // home
+
+// Horizontal scrolling
+$(function(){
+	$("body").mousewheel(function(event, delta) {
+		this.scrollLeft -= (delta * 26);
+		event.preventDefault();
+	});
+});
+
 $(document).ready(function(){
 	// Remove scrolling when nav clic
 	$("nav .no-clic a").on('click', function(event) {
