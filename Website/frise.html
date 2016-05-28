@@ -11,157 +11,51 @@
 </head>
 <body>
 	<table><tr id="technology"> <!-- TECHNOLOGIE -->
-	<td class="first">
-		<div class="block title">
+	<td class="borderBot" id="firstTd">
+		<div class="title">
 			<div class="icon"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></div>
 			TECHNOLOGIE
 		</div>
 	</td>
-	<td class="bg" id="block11">
-		<div class="block">
-			<div class="date">1926</div>
-			<div class="fact">Boîte automatique</div>
-		</div>
-	</td>
-	<td class="bg" id="block21">
-		<div class="block">
-			<div class="date">1929</div>
-			<div class="fact">Anti Blocage de Sécurité</div>
-		</div>
-	</td>
-	<td class="bg" id="block31">
-		<div class="block">
-			<div class="date">1932</div>
-			<div class="fact">Direction assistée</div>
-		</div>
-	</td>
-	<td class="bg" id="block41">
-		<div class="block">
-			<div class="date">1958</div>
-			<div class="fact">Régulateur et limiteur de vitesse</div>
-		</div>
-	</td>
-	<td><div class="block"></div></td>
-	<td class="bg" id="block61">
-		<div class="block">
-			<div class="date">1983</div>
-			<div class="fact">Electronic Stability Program</div>
-		</div>
-	</td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
-	<td class="bg" id="block91">
-		<div class="block">
-			<div class="date">2000</div>
-			<div class="fact">Assistance aux créneaux</div>
-		</div>
-	</td>
-	<td class="bg" id="block101">
-		<div class="block">
-			<div class="date">2004</div>
-			<div class="fact">Détection bandes blanches</div>
-		</div>
-	</td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
+	<td class="borderBot"><div class="timelineTd" id="techTimeline"></div></td>
 	</tr><tr id="law"> <!-- LOI -->
-	<td class="first">
-		<div class="block title">
+	<td class="borderBot">
+		<div class="title">
 			<div class="icon"><span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span></div>
 			LOI
 		</div>
 	</td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
-	<td class="bg" id="block52">
-		<div class="block">
-			<div class="date">1968</div>
-			<div class="fact">Convention de Vienne</div>
-		</div>
-	</td>
-	<td class="bg" id="block62">
-		<div class="block">
-			<div class="date">1978</div>
-			<div class="fact">Ratification de la Convention de Vienne</div>
-		</div>
-	</td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
-	<td class="bg" id="block112">
-		<div class="block">
-			<div class="date">2011</div>
-			<div class="fact">Le Névada autorise les véhicules autonomes</div>
-		</div>
-	</td>
-	<td class="bg" id="block122">
-		<div class="block">
-			<div class="date">2016</div>
-			<div class="fact">Révision de la Convention de Vienne</div>
-		</div>
-	</td>
+	<td class="borderBot"><div class="timelineTd" id="lawTimeline"></div></td>
 	</tr><tr id="divers"> <!-- DIVERS -->
-	<td class="first">
-		<div class="block title">
+	<td>
+		<div class="title">
 			<div class="icon"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></div>
 			DIVERS
 		</div>
 	</td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
-	<td class="bg" id="block43">
-		<div class="block">
-			<div class="date">1957</div>
-			<div class="fact">Minority Report</div>
-			<div class="logo"><span class="glyphicon glyphicon-book" aria-hidden="true"></span></div>
-		</div>
-	</td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
-	<td class="bg" id="block73">
-		<div class="block">
-			<div class="date">1990</div>
-			<div class="fact">Total Recall</div>
-			<div class="logo"><span class="glyphicon glyphicon-film" aria-hidden="true"></span></div>
-		</div>
-	</td>
-	<td class="bg" id="block83">
-		<div class="block">
-			<div class="date">1994</div>
-			<div class="fact">Première démonstration</div>
-		</div>
-	</td>
-	<td class="bg" id="block93">
-		<div class="block">
-			<div class="date">2002</div>
-			<div class="fact">Minority Report</div>
-			<div class="logo"><span class="glyphicon glyphicon-film" aria-hidden="true"></span></div>
-		</div>
-	</td>
-	<td class="bg" id="block103">
-		<div class="block">
-			<div class="date">2004</div>
-			<div class="fact">DARPA challenge</div>
-		</div>
-	</td>
-	<td><div class="block"></div></td>
-	<td><div class="block"></div></td>
+	<td><div class="timelineTd" id="diversTimeline"></div></td>
 	</tr></table>
+
+	<div class="content" id="content">
+		<div class="title"></div>
+		<div class="date"></div>
+		<div class="desc"></div>
+		<div class="infos"></div>
+	</div>
+
 	<div class="menu"><center>
 		<div class="menu-content" id="menu-content">
 			<a onclick="javascript:onLeft();"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
 			<a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
 			<a onclick="javascript:onRight();"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+			<div id="date-menu">1920</div>
 		</div>
 	</center></div>
+	<div id="pointer"></div>
+	<div id="pointer2"></div>
 	<!-- JAVASCRIPT -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-	<script type="text/javascript" src="js/script-h-scroll.js"></script>
 	<script type="text/javascript" src="js/script-frise.js"></script>
 </body>
 </html>
