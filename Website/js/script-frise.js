@@ -225,7 +225,7 @@ function timelineCreator() {
 	$("#techTimeline").html(htmlEventsTech);
 	$("#lawTimeline").html(htmlEventsLaw);
 	$("#diversTimeline").html(htmlEventsDiv);
-	$(".timelineTd").each(function() {$(this).css("width", (maxW+blockW) + "px")});
+	$(".timelineTd").each(function() {$(this).css("width", (maxW+blockW*2*0.75) + "px")});
 }
 
 // Gère l'affichage ou non des blocks et initialise "blockShow"

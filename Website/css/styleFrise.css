@@ -172,7 +172,7 @@ tr {
 	background-repeat: no-repeat;
 	background-position: center;
 	top: calc(100vh - 60px - 14px);
-	left: calc(100vh * 0.33 - 11px);
+	left: -22px;
 }
 #pointer2 {
 	position: fixed;
