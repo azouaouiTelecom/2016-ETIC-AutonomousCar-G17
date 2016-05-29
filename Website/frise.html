@@ -41,13 +41,15 @@
 		<div class="date"></div>
 		<div class="desc"></div>
 		<div class="infos"></div>
+		<div class="link"></div>
+		<div class="close" onclick="onNull();"></div>
 	</div>
 
 	<div class="menu"><center>
 		<div class="menu-content" id="menu-content">
-			<a onclick="javascript:onLeft();"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
-			<a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
-			<a onclick="javascript:onRight();"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+			<a onclick="javascript:onLeft();preventProp (event);"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+			<a href="index.html" onclick="javascript:preventProp (event);"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+			<a onclick="javascript:onRight();preventProp (event);"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 			<div id="date-menu">1920</div>
 		</div>
 	</center></div>
