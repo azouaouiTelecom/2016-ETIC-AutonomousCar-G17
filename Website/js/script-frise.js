@@ -38,7 +38,7 @@ var eventsLaw = [	new Event(1968, "", "Convention de Vienne", "list-alt", 3, "Co
 
 var eventsDiv = [	new Event(1957, "", "Les véhicules autonomes dans la littérature", "book", 3, "Premières apparitions de véhicules autonomes dans la littérature", null),
 					new Event(2015, "Décembre", "Stephen Boulder prévient du danger de la conduite assistée", null, 2, "Stephen Boulder, ingénieur chez Jaguar, estime que la conduite semi-automatique est dangereuse et crée un fausse impression de sécurité", null),
-					new Event(2015, "Octobre", "Volvo prend la responsabilité de ses véhicules autonomes", null, 3, "Annonce de l'entière responsabilité de ses véhicules autonomes assumée par Håkan Samuelsson (PDG Volvo)", "http://fortune.com/2015/10/07/volvo-liability-self-driving-cars/"),
+					new Event(2015, "Octobre", "Volvo prend la responsabilité de ses véhicules autonomes", null, 2, "Annonce de l'entière responsabilité de ses véhicules autonomes assumée par Håkan Samuelsson (PDG Volvo)", "http://fortune.com/2015/10/07/volvo-liability-self-driving-cars/"),
 					new Event(2016, "Février", "Accrochage d'une Google Car", "fire", 2, "Accrochage mineure d'une Google Car Lexus avec un bus sur une route Californienne", "https://www.wired.com/2016/02/googles-self-driving-car-may-caused-first-crash/"),
 					new Event(2016, "Avril", "Les 10 questions de Consumer Watchdog à Google", null, 2, "Les 10 questions de Consumer Watchdog adressées à Google au sujet de la sécurité en marge du NHTSA", "http://www.consumerwatchdog.org/newsrelease/google%E2%80%99s-proposal-%E2%80%9Cfast-track%E2%80%9D-approval-driverless-cars-threat-public-safety-consumer-wa"),
 					new Event(2020, "", "Objectif zéro mort ou blessé grave", null, 3, "Objectif zéro mort ou blessé grave dans un accident impliquant un véhicule récent de la marque Volvo", null)];
@@ -54,6 +54,7 @@ $(function(){
 $(document).ready(function(){
 	timelineCreator (); // génère tous les blocks sur la timeline
 	timelineCalibrate(); // Gère l'affichage ou non des blocks et initialise "blockShow"
+	$("#menu-content").click(function(event) {onMiniTimeline(event);});
 	$("table").click(function() {onNull();});
 	onNull();
 });
@@ -164,6 +165,11 @@ function onBlock(id) {
 
 	if($("#content").css("display").localeCompare("none") == 0)
 		$("#content").animate({width:'toggle'},350);
+	preventProp (event);
+}
+
+// prevent immediate clic propagation
+function preventProp (event){
 	event.stopImmediatePropagation();
 }
 
@@ -183,7 +189,7 @@ function onNull() {
 		$("#content").animate({width:'toggle'},350);
 }
 
-// Get Event from block id
+// get Event from block id
 function id2e(id) {
 	id = id.substr(5);
 	var i = id.substr(0, 1);
@@ -196,6 +202,11 @@ function id2e(id) {
 		default: return null;
 	}
 	return(es[j-1]);
+}
+
+// gère le clic sur la mini timeline
+function onMiniTimeline (event) {
+	scroll((event.pageX - $(document).scrollLeft())*($(document).width()-$(window).width())/$(window).width());
 }
 
 // génère tous les blocks sur la timeline

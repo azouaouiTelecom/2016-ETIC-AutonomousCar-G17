@@ -54,7 +54,7 @@ tr {
 	height: 100px;
 	overflow: hidden;
 	text-align: center;
-	padding: 5px;
+	padding: 6px;
 	background: url("../img/round-shadow.png");
 	background-repeat: no-repeat;
 	background-size: 10%;
@@ -65,6 +65,7 @@ tr {
 }
 .block:hover {
 	z-index: 3;
+	background: url("../img/round-shadow-hover.png");
 }
 .tiny {width: calc((100vh - 60px) * 0.33 * 0.5);height: calc((100vh - 60px) * 0.33 * 0.5);line-height: calc((100vh - 60px) * 0.33 * 0.5);}
 .small {width: calc((100vh - 60px) * 0.33 * 0.66);height: calc((100vh - 60px) * 0.33 * 0.66);line-height: calc((100vh - 60px) * 0.33 * 0.66);}
@@ -90,6 +91,7 @@ tr {
 	line-height: 20px;
 }
 
+
 .content {
 	position: fixed;
 	width: 34%;
@@ -101,6 +103,12 @@ tr {
 	box-shadow: 0 0 10px #000;
 	display: none;
 	padding: 30px;
+}
+@media (max-width:1000px) {
+	.content {width: 50%;}
+}
+@media (max-width:550px) {
+	.content {width: 100%;}
 }
 .content .title {
 	font-size: 24px;
@@ -126,6 +134,22 @@ tr {
 .content .link{
 	font-size: 16px;
 	margin-bottom: 5px;
+}
+.content .close {
+	position: absolute;
+	bottom: calc(30px + 60px);
+	left: 30px;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	background: url("../img/cross1.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	opacity: 0.7;
+}
+.content .close:hover {
+	opacity: 1;
 }
 
 .menu {
