@@ -8,9 +8,9 @@ $(document).ready(function() {
     href:'/',
     url:'/',
     onclick:function(node) {
-      $(node.obj.activeNode.content).each(function() {
-        this.hide();
-      });
+    	$(node.obj.activeNode.content).each(function() {
+    		this.hide();
+    	});
     }
   });
   $('body>ul>li').hide();
@@ -20,7 +20,6 @@ $(document).ready(function() {
       else parentnode=parentnode.mynode;
     
     this.mynode = $('body').addNode(parentnode, $('a:eq(0)',this).text(), {
-//          href:$('a:eq(0)',this).text().toLowerCase(),
       href:$('a:eq(0)',this).attr('href'),
       onclick:function(node) {
         onNodeClick(node);
@@ -55,17 +54,16 @@ content = ["Le temps libéré dans les transports pourra être réinvesti, par e
     "Actuellement, 90 pourcents des accidents de la route sont causés uniquement par l’Homme, avec la conduite assistée on peut anticiper que que le nombre de morts sur la route diminuera énormément. En contrepartie on peut penser que les défaillances matérielles seront plus nombreuses du fait de la complexité accrue des véhicules.",
     "En dehors du problème des accidents, de nouvelles vulnérabilités apparaissent avec l’assistance que l’on ajoute à un véhicule. Tous les sous-systèmes ont tendance à être connectés et communiquant, on peut les attaquer, plusieurs exemples ont été très médiatisés d’attaque contre des voitures, il est possible d’en prendre le contrôle. Quel niveau de sécurité présenteront les voitures ? Y aura t’il une différence de sécurité informatique sensible dans le prix d’achat ?",]
 
+var displayed = 0;
+
 function onNodeClick(e)
 {
-  if(e.href !== e.undefined) {
-    $("#" + e.href).children(".text").css("display", "inline");
-    $('a[href*="' + e.href + '"]').html("<div class=\"leave\"><div class='nodeTitle'>" + titles[e.href-1] + "</div>" + content[e.href-1] + "</div>");
-  }
-  else {
-    for(var i = 1; i < 100; i++) {
-      if($('a[href*="' + i + '"]').length == 0)
-        break;
-      $('a[href*="' + i + '"]').html("<div class=\"leave\">" + titles[i-1] + "</div>");
-    }
-  }
+	console.log(e.href);
+	if (e.href != displayed)
+		$('a[href="' + displayed + '"]').html("<div class=\"leave\">" + titles[displayed-1] + "</div>");
+	if(e.href !== undefined) {
+		displayed = e.href;
+		$("#" + e.href).children(".text").css("display", "inline");
+		$('a[href="' + e.href + '"]').html("<div class=\"leave\"><div class='nodeTitle'>" + titles[e.href-1] + "</div>" + content[e.href-1] + "</div>");
+	}
 }

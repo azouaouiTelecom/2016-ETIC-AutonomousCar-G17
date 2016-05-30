@@ -27,8 +27,8 @@ body .content {
 	width: calc(100vw * 0.5);
 	height: 88%;
 	overflow: auto;
-	margin: 8% 40px 4% 40px;
-	padding: 6px 24px 12% 24px;
+	margin: 4% 40px 4% 40px;
+	padding: 10px 24px 16% 24px;
 	text-align: justify;
 	color: #111;
 	background: rgba(255, 255, 255, 0.5);

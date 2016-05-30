@@ -12,6 +12,7 @@ body {
 }
 .js-mindmap-active a.node.active {
 	border-width: 4px !important;
+	z-index: 102 !important;
 }
 
 .js-mindmap-active a.node.activeparent {

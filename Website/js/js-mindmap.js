@@ -188,8 +188,8 @@
       // if: I'm not active AND my parent's not active AND my children aren't active ...
       if (this.obj.activeNode !== this && this.obj.activeNode !== this.parent && this.obj.activeNode.parent !== this) {
         // TODO hide me!
-        this.el.hide();
-        this.visible = false;
+        //this.el.hide();
+        //this.visible = false;
       }
     } else {
       if (this.obj.activeNode === this || this.obj.activeNode === this.parent || this.obj.activeNode.parent === this) {
