@@ -70,24 +70,28 @@ svg.append("g").selectAll("path")
     .on("mouseover", fade(.1))
     .on("mouseout", fade(1));
 
+svg.append("g").append('defs')
+    .append('path')
+    .attr({
+      d: "M10 50 C10 0 90 0 90 50",
+      id: "textPath"
+    });
+
 var ticks = svg.append("g").selectAll("g")
     .data(chord.groups)
   .enter().append("g").selectAll("g")
     .data(groupTicks)
   .enter().append("g")
     .attr("transform", function(d) {
-      return "rotate(" + (d.angle * 180 / Math.PI - 100) + ")"
+      return "rotate(" + ((d.angle - Math.PI/2)*180/Math.PI) + ")"
           + "translate(" + outerRadius + ",0)";
     });
 
 ticks.append("text")
-    .attr("x", 0)
     .attr("dy", "-10")
-    .attr("transform", "rotate(100)translate(90)")
-    .style("text-anchor", "end")
     .style("fill", "#EEEEEE")
     .text(function(d) { return d.label; })
-    .attr("class", "labelTxt");
+    .attr("class", "labelTxt")
 
 svg.append("g")
     .attr("class", "chord")
@@ -96,7 +100,9 @@ svg.append("g")
   .enter().append("path")
     .attr("d", d3.svg.chord().radius(innerRadius))
     .style("fill", function(d) { return fill(d.target.index); })
-    .style("opacity", 1);
+    .style("opacity", 1)
+    .on("mouseover", chordFade(.1))
+    .on("mouseout", chordFade(1));
 
 // Returns an array of tick angles and labels, given a group.
 function groupTicks(d) {
@@ -125,6 +131,46 @@ function fade(opacity) {
       }
       $(".box").children(".title").text(labels[g.index]);
       $(".box").children(".desc").html(desc);
-      console.log(g.index);
   };
 }
+
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+
+function chordFade(time){
+  return function(d, i) {
+    var thisD = d;
+    console.log(d.source.index + " - " + d.target.index);
+    svg.selectAll(".chord path")
+        .filter(function(d) { return(thisD != d); })
+      .transition()
+        .style("opacity", time);
+      /*var desc = "";
+      for (var i = 0; i < content[g.index].length; i++)
+      {
+        desc += "<div class=\"title\">";
+        desc += contentText[content[g.index][i]][0];
+        desc += "</div>";
+        desc += contentText[content[g.index][i]][1];
+      }
+      $(".box").children(".title").text(labels[g.index]);
+      $(".box").children(".desc").html(desc);*/
+  };
+}
+
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+// MUST BE FINISHED !!!
+
+$(document).ready(function(){
+  $(".labelTxt").each(function(){$(this).attr("transform", "rotate(" + (90) + ")translate(-" + ($(this).width()/2) + ")");});
+});
