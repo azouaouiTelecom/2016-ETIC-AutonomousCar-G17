@@ -49,6 +49,13 @@ svg .labelTxt {
 	padding: 5%;
 	overflow: auto;
 }
+.content .box.description {
+	height:calc(95% - 80px);	
+}
+.content .box.legend {
+	height:80px;
+	margin-top:5%;
+}
 .content .title {
 	font-size: 24px;
 	margin-bottom: 20px;
