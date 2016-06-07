@@ -39,8 +39,9 @@ body {
 }
 
 .node {
-	max-width: 50%;
+	max-width: 40%;
 	padding: 8px 20px !important;
+	text-align: justify !important;
 }
 .color01 {
 	background: #36a8a2 !important;
