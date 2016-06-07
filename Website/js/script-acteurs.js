@@ -26,7 +26,8 @@ for(var i = 0; i < labels.length; i++)
   colors[i] = colorCats[cats[i]];
 
 $(".legend").find("li").each(function() {
-  $(this).css("color", colorCats[$(this).attr("class")]);
+  var lgspan = $(this).find("span").first();
+  lgspan.css("background-color", colorCats[lgspan.attr("class")]);
 });
 
 var content = [[0], [1], [3], [4], [5], [6], [17], [7], [8], [9], [10], [13], [11], [12], [14], [16]];
