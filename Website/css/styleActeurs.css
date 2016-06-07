@@ -50,11 +50,36 @@ svg .labelTxt {
 	overflow: auto;
 }
 .content .box.description {
-	height:calc(95% - 80px);	
+	height:calc(95% - 180px);	
 }
 .content .box.legend {
-	height:80px;
+	height:180px;
 	margin-top:5%;
+	padding: 20px 5%;
+}
+.content .box.legend ul {
+	margin-bottom:0px;
+}
+.content .box.legend ul li {
+	display:inline-block;
+	width:48%;
+	vertical-align:middle;
+}
+.content .box.legend ul li span {
+	margin:0px 3px;
+}
+.content .box.legend ul li span:nth-child(2) {
+	display:inline-block;
+	vertical-align:middle;
+	height: 30px;
+}
+.content .box.legend ul li span:first-child {
+	background-color:#A4A4A4;
+	height: 20px;
+	width:30px;
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+	display:inline-block;
 }
 .content .title {
 	font-size: 24px;
