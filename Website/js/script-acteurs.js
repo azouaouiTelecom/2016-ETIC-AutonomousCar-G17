@@ -8,11 +8,15 @@ var matrix = [
   [3, 0, 0, 0, 0, 3, 0]
 ];
 var labels = ["Constructeurs", "Equipementiers", "Etats", "Usagers", "ONGs", "Médias", "Chercheurs"];
-var cat = ["constructeur", "equipementier", "etat", "usager", "ong", "media", "chercheur"];
-var colorCats = ["constructeur" : "#48926d", "equipementier" : "#429941", "etat" : "#28827d", "usager" : "#0269d6", "ong" : "#39914f", "media" : "#0974bf", "chercheur" : "#54b02a"];
+var cats = ["constructeur", "equipementier", "etat", "usager", "ong", "media", "chercheur"];
+var colorCats = {"constructeur" : "#48926d", "equipementier" : "#429941", "etat" : "#28827d", "usager" : "#0269d6", "ong" : "#39914f", "media" : "#0974bf", "chercheur" : "#54b02a"};
 var colors = [];
 for(var i = 0; i < labels.length; i++)
-	colors[i] = colorCats[cat[i]];
+	colors[i] = colorCats[cats[i]];
+
+$(".legend").find("li").each(function() {
+	$(this).css("color", colorCats[$(this).attr("class")]);
+});
 
 var content = [[0, 1, 3, 4, 5, 6], [7], [8, 9], [10, 13], [11], [12, 14], [16]];
 var contentText = [["Google", "Propose les algorithmes de conduite les plus efficaces. Sa stratégie est de libérer du temps pour que les usagers puissent surfer davantages."],
