@@ -38,6 +38,19 @@ body .content ul {
 	margin-left: 20px;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .isChrome{
+    	display: none;
+    } 
+}
+
+.isChrome{
+	position: fixed;
+	top: 10px;
+	left: 10px;
+} 
+
 /* NAV */
 
 nav {
