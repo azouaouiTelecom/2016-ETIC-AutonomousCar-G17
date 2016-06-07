@@ -8,7 +8,12 @@ var matrix = [
   [3, 0, 0, 0, 0, 3, 0]
 ];
 var labels = ["Constructeurs", "Equipementiers", "Etats", "Usagers", "ONGs", "Médias", "Chercheurs"];
-var colors = ["#48926d", "#429941", "#28827d", "#0269d6", "#39914f", "#0974bf", "#54b02a"];
+var cat = ["constructeur", "equipementier", "etat", "usager", "ong", "media", "chercheur"];
+var colorCats = ["constructeur" : "#48926d", "equipementier" : "#429941", "etat" : "#28827d", "usager" : "#0269d6", "ong" : "#39914f", "media" : "#0974bf", "chercheur" : "#54b02a"];
+var colors = [];
+for(var i = 0; i < labels.length; i++)
+	colors[i] = colorCats[cat[i]];
+
 var content = [[0, 1, 3, 4, 5, 6], [7], [8, 9], [10, 13], [11], [12, 14], [16]];
 var contentText = [["Google", "Propose les algorithmes de conduite les plus efficaces. Sa stratégie est de libérer du temps pour que les usagers puissent surfer davantages."],
                 ["AKKA (avec dassault)", "Se donne un objectif à plus long terme, la conduite totalement automatisée et généralisée d’ici 15 à 20 ans, tout automatique, il y a la notion de véhicule de l’avenir."],
