@@ -8,6 +8,7 @@ $(document).ready(function() {
     href:'/',
     url:'/',
     onclick:function(node) {
+      onNodeClick(node);
     	$(node.obj.activeNode.content).each(function() {
     		this.hide();
     	});
@@ -18,7 +19,7 @@ $(document).ready(function() {
     var parentnode = $(this).parents('li').get(0);
     if (typeof(parentnode)=='undefined') parentnode=root;
       else parentnode=parentnode.mynode;
-    
+
     this.mynode = $('body').addNode(parentnode, $('a:eq(0)',this).text(), {
       href:$('a:eq(0)',this).attr('href'),
       onclick:function(node) {
@@ -34,9 +35,21 @@ $(document).ready(function() {
     $(this).hide();
     $('>ul>li', this).each(addLI);
   };
-  $('body>ul>li>ul').each(function() { 
+  $('body>ul>li>ul').each(function() {
     $('>li', this).each(addLI);
   });
+  // background colors
+  $('a[href="/"]').addClass("color0");
+  $('a[href="01"]').addClass("color01");
+  for (var i = 1; i < 6; i++)
+    $('a[href="' + i + '"]').addClass("color1");
+  $('a[href="02"]').addClass("color02");
+  for (var i = 6; i < 10; i++)
+    $('a[href="' + i + '"]').addClass("color2");
+  $('a[href="03"]').addClass("color03");
+  for (var i = 10; i < 12; i++)
+    $('a[href="' + i + '"]').addClass("color3");
+
 });
 
 titles = ["Temps libéré", "Plasir de conduire", "Démocratisation par étapes", "Conduire ivre", "Fluidité du traffic",
@@ -58,10 +71,9 @@ var displayed = 0;
 
 function onNodeClick(e)
 {
-	console.log(e.href);
 	if (e.href != displayed)
 		$('a[href="' + displayed + '"]').html("<div class=\"leave\">" + titles[displayed-1] + "</div>");
-	if(e.href !== undefined) {
+	if(e.href !== undefined && e.href != "/" && e.href[0] != '0') {
 		displayed = e.href;
 		$("#" + e.href).children(".text").css("display", "inline");
 		$('a[href="' + e.href + '"]').html("<div class=\"leave\"><div class='nodeTitle'>" + titles[e.href-1] + "</div>" + content[e.href-1] + "</div>");
