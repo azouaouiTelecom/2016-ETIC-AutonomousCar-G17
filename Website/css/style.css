@@ -25,7 +25,7 @@ body #caneva {
 }
 body .content { 
 	width: calc(100vw * 0.5);
-	height: 88%;
+	height: 100%;
 	overflow: auto;
 	margin: 4% 40px 0 40px;
 	padding: 10px 24px 18% 24px;
