@@ -147,9 +147,9 @@ function fade(opacity) {
       var desc = "";
       for (var i = 0; i < content[g.index].length; i++)
       {
-        desc += "<div class=\"title\">";
+        /*desc += "<div class=\"title\">";
         desc += contentText[content[g.index][i]][0];
-        desc += "</div>";
+        desc += "</div>";*/
         desc += contentText[content[g.index][i]][1];
       }
       $(".box").children(".title").text(labels[g.index]);
@@ -195,5 +195,6 @@ function chordFade(time){
 // MUST BE FINISHED !!!
 
 $(document).ready(function(){
-  $(".labelTxt").each(function(){$(this).attr("transform", "rotate(" + (90) + ")translate(-" + ($(this).width()/2) + ")");});
+  var idx = 0;
+  $(".labelTxt").each(function(){$(this).attr("transform", "rotate(" + (90) + ")translate(-" + ($(this).width()/2) + ")");$(this).css("fill", colorCats[cats[idx]]);idx++});
 });
