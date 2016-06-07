@@ -19,8 +19,8 @@ var matrix = [
 
 var labels = ["Google", "AKKA", "Yamaha", "Porsche", "Jaguar", "Tesla", "Volvo", "Equipementiers", "FBI", "Les législateurs", "DMC de Californie", "Consommateurs", "ONGs", "Sondage", "Les médias", "Chercheurs"];
 var cats = ["constructeur", "constructeur", "constructeur", "constructeur", "constructeur", "constructeur", "constructeur", "equipementier", "etat", "etat", "usager", "usager", "ong", "media", "media", "chercheur"];
-var colorCats = {"constructeur" : "#48926d", "equipementier" : "#429941", "etat" : "#28827d", "usager" : "#0269d6", "ong" : "#39914f", "media" : "#0974bf", "chercheur" : "#54b02a"};
-
+var colorCats = {"constructeur" : "#58c649", "equipementier" : "#dfde26", "etat" : "#df7c26", "usager" : "#df262a", "ong" : "#aa26df", "media" : "#267fdf", "chercheur" : "#26df8e"};
+//colorCats = {"constructeur" : "#48926d", "equipementier" : "#429941", "etat" : "#28827d", "usager" : "#0269d6", "ong" : "#39914f", "media" : "#0974bf", "chercheur" : "#54b02a"};
 var colors = [];
 for(var i = 0; i < labels.length; i++)
   colors[i] = colorCats[cats[i]];
