@@ -46,7 +46,7 @@ var eventsDiv = [	new Event(1957, "", "Minority Report", null, 3, "L'œuvre de P
 
 // Horizontal scrolling
 $(function(){
-	$("body").mousewheel(function(event, delta) {
+	$("html, body").mousewheel(function(event, delta) {
 		this.scrollLeft -= (delta * 34);
 		event.preventDefault();
 	});
@@ -153,7 +153,7 @@ function scroll(scroll){
 }
 
 // lorsque l'on click sur un block
-function onBlock(id) {
+function onBlock(id, event) {
 	var e = id2e(id);
 	$("#content").children(".title").text(e.title);
 	$("#content").children(".date").text(e.datePlus + " " + e.date);

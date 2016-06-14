@@ -3,7 +3,7 @@ var state = 0; // home
 
 // Horizontal scrolling
 $(function(){
-	$("body").mousewheel(function(event, delta) {
+	$("html, body").mousewheel(function(event, delta) {
 		this.scrollLeft -= (delta * 26);
 		event.preventDefault();
 	});
@@ -29,15 +29,15 @@ $(document).ready(function(){
 // Door button pressed
 function onDoorBtn() {
 	state = 2; // scrolling to content
-	scroll(1);
+	scrolling(1);
 }
 // Smooth scrolling
-function scroll(idx){
+function scrolling(idx){
 	if(idx == 0)
 		state = 3; // scrolling to home
-	var scrolling = (idx < 1) ? 0 : $(window).width() + $("#content"+idx).outerWidth(true) * (idx-1);
+	var scrollOffset = (idx < 1) ? 0 : $(window).width() + $("#content"+idx).outerWidth(true) * (idx-1);
 	$('html, body').animate({
-		scrollLeft: scrolling
+		scrollLeft: scrollOffset
 	}, 600);
 }
 // Scrolling event
