@@ -63,6 +63,11 @@ tr {
 	line-height: calc((100vh - 60px) * 0.33 * 0.6);
 	z-index: 2;
 }
+@-moz-document url-prefix() {
+	.block { 
+		padding-top: 4%;
+	}
+}
 .block:hover {
 	z-index: 3;
 	background: url("../img/round-shadow-hover.png");
