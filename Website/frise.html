@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="img/icon-car.ico" />
+	<link rel="icon" type="image/png" href="img/icon-car.png" />
+	<title>Voiture Autonome - Frise</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/styleFrise.css" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<table><tr id="technology"> <!-- TECHNOLOGIE -->
+	<td class="borderBot" id="firstTd">
+		<div class="title">
+			<div class="icon"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></div>
+			TECHNOLOGIE
+		</div>
+	</td>
+	<td class="borderBot"><div class="timelineTd" id="techTimeline"></div></td>
+	</tr><tr id="law"> <!-- LOI -->
+	<td class="borderBot">
+		<div class="title">
+			<div class="icon"><span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span></div>
+			JURIDIQUE
+		</div>
+	</td>
+	<td class="borderBot"><div class="timelineTd" id="lawTimeline"></div></td>
+	</tr><tr id="divers"> <!-- DIVERS -->
+	<td>
+		<div class="title">
+			<div class="icon"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></div>
+			DIVERS
+		</div>
+	</td>
+	<td><div class="timelineTd" id="diversTimeline"></div></td>
+	</tr></table>
+
+	<div class="content" id="content">
+		<div class="title"></div>
+		<div class="date"></div>
+		<div class="desc"></div>
+		<div class="infos"></div>
+		<div class="link"></div>
+		<div class="close" onclick="onNull();"></div>
+	</div>
+
+	<div class="menu"><center>
+		<div class="menu-content" id="menu-content">
+			<a onclick="javascript:onLeft();preventProp (event);"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+			<a href="index.html" onclick="javascript:preventProp (event);"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+			<a onclick="javascript:onRight();preventProp (event);"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+			<div id="date-menu">1920</div>
+		</div>
+	</center></div>
+	<div id="pointer"></div>
+	<div id="pointer2"></div>
+	<!-- JAVASCRIPT -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/script-frise.js"></script>
+</body>
+</html>
