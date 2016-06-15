@@ -237,7 +237,7 @@ function fade(opacity) {
         .filter(function(d) { return d.source.index != i && d.target.index != i; })
       .transition()
         .style("opacity", opacity);
-      console.log(content[g.index]);
+      //console.log(content[g.index]);
       var desc = contentText[content[g.index]][1];
       $(".box").children(".title").text(labels[g.index]);
       $(".box").children(".desc").html(desc);
